@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "PennyPinsir",
+    "version": "1.0",
+  
+    "description": "Designed to be a simple browser extention that will find you the cheapest deals on digital game storefronts.",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+
+    "permissions": ["activeTab"],
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["pennyPinsir.js"]
+      }
+
+    ],
+  
+    "browser_action": {
+      "default_icon": "icons/border-48.png",
+      "default_title": "PennyPinsir",
+      "default_popup": "popup/pennyPinsir.html"
+    }
+  }
+  
